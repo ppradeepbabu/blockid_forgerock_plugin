@@ -1,4 +1,4 @@
-# **BlockID Passwordless Login Scripted Decision Node:**
+# **BlockID Passwordless Login Authentication:**
 
 The BlockID Passwordless Authentication tree let Administrators and End Users to login passwordless to ForgeRock Access manager administrative console OR any applications protected by Access manager. Passwordless login will include 
   a) Scanning a QR code rendered by 1Kosmos BlockID platform 
