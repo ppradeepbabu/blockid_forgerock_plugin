@@ -1,9 +1,13 @@
 # **BlockID Passwordless Login:**
 
 The BlockID Passwordless Authentication tree let Administrators and End Users to login passwordless to ForgeRock Access manager application OR any applications protected by Access manager. Passwordless login will be performed by Scanning a QR code rendered by 1Kosmos BlockID platform
-The BlockID Passwordless Authentication tree let Administrators and End Users to login passwordless to ForgeRock Access manager administrative console OR any applications protected by Access manager. Passwordless login will include 
+The BlockID Passwordless Authentication tree let Administrators and End Users to login passwordless to ForgeRock Access manager administrative console OR any applications protected by Access manager. 
+
+Passwordless login will include
+
   a) Scanning a QR code rendered by 1Kosmos BlockID platform 
-  b) Providing biometric authentication (FaceID, LiveID) on BlockID Mobile App and consent
+  
+  b) Providing biometric authentication (FaceID, LiveID) on BlockID Mobile App and user consent
 
 ## **Usage:**
 To enable BlockID Passwordless authentication
