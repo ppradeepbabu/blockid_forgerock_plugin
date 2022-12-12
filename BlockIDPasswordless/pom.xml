@@ -8,11 +8,11 @@
 		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bidsdk</groupId>
-	<artifactId>UWL2REST</artifactId>
+	<groupId>com.blockid</groupId>
+	<artifactId>BlockIDPasswordless</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>UWL2REST</name>
+	<name>BlockIDPasswordless</name>
 	<description>BlockID UWL REST interface</description>
 	<properties>
 		<java.version>11</java.version>
@@ -73,6 +73,12 @@
 		    <version>2.5</version>
 		    <scope>provided</scope>
 		</dependency>
+		<!--dependency>
+		    <groupId>com.github.1Kosmos</groupId>
+		    <artifactId>java-helper-files</artifactId>
+		    <version>v2.0.0</version>
+		    <scope>compile</scope>
+		</dependency-->
 
 	</dependencies>
 
@@ -83,6 +89,25 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				  <groupId>com.googlecode.maven-download-plugin</groupId>
+				  <artifactId>download-maven-plugin</artifactId>
+				  <version>1.3.0</version>
+				  <executions>
+				    <execution>
+				      <!-- the wget goal actually binds itself to this phase by default -->
+				      <phase>generate-sources</phase>
+				      <goals>
+				        <goal>wget</goal>
+				      </goals>
+				      <configuration>
+				        <url>https://github.com/1Kosmos/java-helper-files/archive/refs/tags/v2.0.0.zip</url>
+				        <unpack>true</unpack>
+				        <outputDirectory>src/main/java</outputDirectory>
+				      </configuration>
+				    </execution>
+				  </executions>
+			</plugin>
 		</plugins>
 	</build>
 	<repositories>
@@ -91,6 +116,10 @@
             <name>Maven Repository for other libraries</name>
             <url>https://repo.maven.apache.org/maven2/</url>
         </repository>
+        <repository>
+    		<id>jitpack.io</id>
+    		<url>https://jitpack.io</url>
+		</repository>
 	</repositories>
 
 </project>

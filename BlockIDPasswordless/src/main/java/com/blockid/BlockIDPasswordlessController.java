@@ -1,4 +1,11 @@
-package com.bidsdk.UWL2REST;
+/**
+ * Copyright (c) 2018, 1Kosmos Inc. All rights reserved.
+ * Licensed under 1Kosmos Open Source Public License version 1.0 (the "License");
+ * You may not use this file except in compliance with the License.
+ * You may obtain a copy of this license at
+ *    https://github.com/1Kosmos/1Kosmos_License/blob/main/LICENSE.txt
+ */
+package com.blockid;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,23 +17,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Uwl2RestController {
+public class BlockIDPasswordlessController {
 	
 	@GetMapping("/healthcheck")
 	public String healthcheck() {
-		return "Greetings from BlockID UWL REST API";
+		return "Greetings from BlockID Passwordless REST API";
 	}
 	
-	@Autowired private Uwl2RestApplication uwl2RestApplication;
+	@Autowired private BlockIDPasswordlessApplication blockidPasswordlessApplication;
 
     @RequestMapping(method = RequestMethod.GET,value="/getSessionURL")  
     public @ResponseBody String getSessionURL() {
-        return uwl2RestApplication.getSessionURL().toString();
+        return blockidPasswordlessApplication.getSessionURL().toString();
     }
 	
     @RequestMapping(method = RequestMethod.POST,value="/pollSession")  
     public @ResponseBody String pollSession(@RequestParam String sessionID) {
-        return uwl2RestApplication.pollSession(sessionID).toString();
+        return blockidPasswordlessApplication.pollSession(sessionID).toString();
     }
 
 }

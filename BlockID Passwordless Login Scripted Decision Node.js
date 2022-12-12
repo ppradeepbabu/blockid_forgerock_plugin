@@ -14,6 +14,7 @@ var fr=JavaImporter(
  )
 
 try {
+	var blockIDPasswordlessURL = "https://<<HOST_NAME>>:<<PORT>>/BlockIDPasswordless";	
 	if (callbacks.isEmpty()) {
         //retrieve BlockID session URL for polling
         var sessionURL =  getBlockIDSessionURL();
@@ -46,7 +47,7 @@ function getBlockIDSessionURL() {
            logger.message ("BlockID QR Code Display :::getBlockIDSessionURL()  Start ");
            //Initiate session URL against getSessionURL REST endpoint
            var request = new org.forgerock.http.protocol.Request();
-           request.setUri("https://<<UW2REST_HOST_NAME>>:<<UW2REST_PORT>>/UWL2REST/getSessionURL");
+           request.setUri(blockIDPasswordlessURL + "/getSessionURL");
            request.setMethod("GET");
            var response = httpClient.send(request).get();
            var jsonResult = response.getEntity().getJson();
@@ -67,7 +68,7 @@ function startPolling(sessionID){
 	try {
    		      logger.message("BlockID QR Code Display :::startPolling()  Start "); 
               logger.message("sessionID value inside startPolling: " + sessionID); 
-              var pollingURL = "https://<<UW2REST_HOST_NAME>>:<<UW2REST_PORT>>/UWL2REST/pollSession?sessionID="+sessionID;
+              var pollingURL = blockIDPasswordlessURL + "/pollSession?sessionID="+sessionID;
 
               //Initiate polling session against pollSession REST endpoint
               var request = new org.forgerock.http.protocol.Request();
