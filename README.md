@@ -25,7 +25,7 @@ To enable BlockID Passwordless authentication
 * Please validate the BlockIDPasswordless sprint boot application status by performing GET operation on BlockIDPasswordless/healthcheck REST endpoint through a REST Client (such as POSTMAN)
 * Login to ForegeRock Access Manager administrative console
 * Create a "Decision node script for authentication trees" type javascript under Realm --> Scripts section
-* Modify "BlockID Passwordless Login Scripted Decision Node.js" contents with <<HOST_NAME>> and <<PORT>> values and place the updated contents in the "Decision node script for authentication trees" script
+* Modify "BlockID Passwordless Login Scripted Decision Node.js" contents with <<HOST_NAME>> and << PORT >> values and place the updated contents in the "Decision node script for authentication trees" script
 * Create a passwordless Authentication tree 
   ### **Example Flow:**
 
