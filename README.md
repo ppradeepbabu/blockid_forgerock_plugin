@@ -13,7 +13,7 @@ Passwordless login will include
 To enable BlockID Passwordless authentication
 * Download the code from the github (URL: https://github.com/1KBlockID/java_forgerock_plugin) 
 * Please obtain a license and tenant details from 1Kosmos sales team (<sales@1kosmos.com>) 
-* Update the below properties in UWL2REST/src/main/resources/application.properties with your tenant & license details
+* Update the below properties in BlockIDPasswordless/src/main/resources/application.properties with your tenant & license details
   
   uwl.dns.url=<<to_be_substituted>>
   
@@ -21,6 +21,7 @@ To enable BlockID Passwordless authentication
   
   uwl.community.name=<<to_be_substituted>>
   
+* You can import the project as maven project in Eclipse / IntelliJ
 * Compile and deploy the BlockIDPasswordless springboot application in any of the application container
 * Please validate the BlockIDPasswordless sprint boot application status by performing GET operation on BlockIDPasswordless/healthcheck REST endpoint through a REST Client (such as POSTMAN)
 * Login to ForegeRock Access Manager administrative console
