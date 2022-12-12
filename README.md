@@ -1,6 +1,4 @@
-@@ -1,7 +1,33 @@
-BlockID Passwordless Login Scripted Decision Node
-# **BlockID Passwordless Login Scripted Decision Node:**
+# **BlockID Passwordless Login:**
 
 The BlockID Passwordless Authentication tree let Administrators and End Users to login passwordless to ForgeRock Access manager application OR any applications protected by Access manager. Passwordless login will be performed by Scanning a QR code rendered by 1Kosmos BlockID platform
 The BlockID Passwordless Authentication tree let Administrators and End Users to login passwordless to ForgeRock Access manager administrative console OR any applications protected by Access manager. Passwordless login will include 
@@ -20,11 +18,11 @@ To enable BlockID Passwordless authentication
   
   uwl.community.name=<<to_be_substituted>>
   
-* Compile and deploy the UWL2REST springboot application in any of the application container
-* Please validate the UWL2REST sprint boot application status by performing GET operation on UWL2REST/healthcheck REST endpoint through a REST Client (such as POSTMAN)
+* Compile and deploy the BlockIDPasswordless springboot application in any of the application container
+* Please validate the BlockIDPasswordless sprint boot application status by performing GET operation on BlockIDPasswordless/healthcheck REST endpoint through a REST Client (such as POSTMAN)
 * Login to ForegeRock Access Manager administrative console
 * Create a "Decision node script for authentication trees" type javascript under Realm --> Scripts section
-* Modify "BlockID Passwordless Login Scripted Decision Node.txt" contents with UW2REST_HOST_NAME & UW2REST_PORT and place the updated contents in the "Decision node script for authentication trees" script
+* Modify "BlockID Passwordless Login Scripted Decision Node.js" contents with <<HOST_NAME>> & <<PORT>> values and place the updated contents in the "Decision node script for authentication trees" script
 * Create a passwordless Authentication tree 
   ### **Example Flow:**
 
