@@ -5,7 +5,6 @@ The BlockID Passwordless Authentication tree let Administrators and End Users to
   a) Scanning a QR code rendered by 1Kosmos BlockID platform 
   b) Providing biometric authentication (FaceID, LiveID) on BlockID Mobile App and consent
 
-Example Flow
 ## **Usage:**
 To enable BlockID Passwordless authentication
 * Download the code from the github (URL: https://github.com/1KBlockID/java_forgerock_plugin) 
@@ -22,11 +21,10 @@ To enable BlockID Passwordless authentication
 * Please validate the BlockIDPasswordless sprint boot application status by performing GET operation on BlockIDPasswordless/healthcheck REST endpoint through a REST Client (such as POSTMAN)
 * Login to ForegeRock Access Manager administrative console
 * Create a "Decision node script for authentication trees" type javascript under Realm --> Scripts section
-* Modify "BlockID Passwordless Login Scripted Decision Node.js" contents with <<HOST_NAME>> & <<PORT>> values and place the updated contents in the "Decision node script for authentication trees" script
+* Modify "BlockID Passwordless Login Scripted Decision Node.js" contents with <<HOST_NAME>> and <<PORT>> values and place the updated contents in the "Decision node script for authentication trees" script
 * Create a passwordless Authentication tree 
   ### **Example Flow:**
 
-![image](https://user-images.githubusercontent.com/114595779/205929301-3414a1c0-38dd-4385-b4f3-dff6f5499a7a.png)
   ![image](https://user-images.githubusercontent.com/114595779/205929301-3414a1c0-38dd-4385-b4f3-dff6f5499a7a.png)
 
 * Use the created "Decision node script for authentication trees" script for scripted decision node. Add "true" and "false" as scripted decision outcomes
