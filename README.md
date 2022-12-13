@@ -11,7 +11,7 @@ Passwordless login will include
 
 ## **Usage:**
 To enable BlockID Passwordless authentication
-* Download the code from the github (URL: https://github.com/1KBlockID/java_forgerock_plugin) 
+* Download the code from the github (URL: https://github.com/1Kosmos/blockid_forgerock_plugin) 
 * Please obtain a license and tenant details from 1Kosmos sales team (<sales@1kosmos.com>) 
 * Update the below properties in BlockIDPasswordless/src/main/resources/application.properties with your tenant & license details
   
